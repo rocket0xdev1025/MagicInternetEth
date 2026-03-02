@@ -1,0 +1,35 @@
+.ctc-block-copy {
+  transition: all ease-in-out 0.2s;
+}
+
+.ctc-block-content > p:last-child {
+  margin-bottom: 0;
+}
+
+.ctc-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ctc-with-icon .check-icon {
+  display: none;
+}
+
+.copied .ctc-with-icon .copy-icon {
+  display: none;
+}
+
+.copied .ctc-with-icon .check-icon {
+  display: block;
+}
+
+/* Prevent giant copy icons when blocks/shortcodes are inside table cells. */
+table .ctc-with-icon svg,
+table .ctc-block-copy svg {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex-shrink: 0;
+}
